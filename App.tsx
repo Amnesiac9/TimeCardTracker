@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -15,6 +16,7 @@ import {
   Text,
   useColorScheme,
   View,
+  Button,
 } from 'react-native';
 
 import {
@@ -80,6 +82,7 @@ function App(): React.JSX.Element {
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
+          <Button title="Test Button"></Button>
           <Section title="See Your Changes">
             <ReloadInstructions />
           </Section>
