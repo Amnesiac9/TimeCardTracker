@@ -16,7 +16,7 @@ import {
   Text,
   useColorScheme,
   View,
-  Button,
+  //Button,
 } from 'react-native';
 
 import {
@@ -36,21 +36,10 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   return (
     <View style={styles.sectionContainer}>
       <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
+        style={[styles.sectionTitle, {color: isDarkMode ? Colors.white : Colors.black}]}>
         {title}
       </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
+      <Text style={[styles.sectionDescription, {color: isDarkMode ? Colors.light : Colors.dark}]}>
         {children}
       </Text>
     </View>
@@ -74,15 +63,12 @@ function App(): React.JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
+        <View style={{backgroundColor: isDarkMode ? Colors.black : Colors.white}}>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
-          <Button title="Test Button"></Button>
+          
           <Section title="See Your Changes">
             <ReloadInstructions />
           </Section>
